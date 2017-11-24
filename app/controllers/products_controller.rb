@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   end
   # Routed from POST /products/:id/add_to_cart
   def add_to_cart
+     # Load the cart from the session, or create a new empty cart
     cart << params[:product]
     redirect_to '/'
   end
