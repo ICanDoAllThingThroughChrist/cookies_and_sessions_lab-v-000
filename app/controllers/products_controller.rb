@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
   ##Load the cart from the session, or create a new empty cart.
   def index
   end
+  # Routed from POST /items/:id/add_to_cart
   def add_to_cart
     cart << params[:product]
     redirect_to '/'
